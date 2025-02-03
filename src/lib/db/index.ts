@@ -1,8 +1,8 @@
-import { Pool, QueryConfig, QueryResult } from 'pg';
+import { Pool, QueryConfig, QueryResult, QueryResultRow } from 'pg';
 
 const pool = new Pool();
 
-export async function query<T extends Record<string, unknown>>(
+export async function query<T extends QueryResultRow>(
     text: string,
     params: QueryConfig['values'] = [],
 ): Promise<QueryResult<T>> {
@@ -21,3 +21,5 @@ export async function query<T extends Record<string, unknown>>(
         throw err;
     }
 }
+
+export default pool;
