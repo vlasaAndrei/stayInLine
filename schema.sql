@@ -22,6 +22,7 @@ CREATE TABLE projects (
 -- Tasks table
 CREATE TABLE tasks (
     id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL,
     name VARCHAR(255) NOT NULL,
     description TEXT,
     deadline TIMESTAMPTZ,

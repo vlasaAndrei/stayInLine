@@ -39,6 +39,8 @@ export interface Task {
     recurrence_day_of_month: number | null;
 }
 
+export type CreateTaskInput = Omit<Task, 'id' | 'created_at' | 'updated_at'>;
+
 export interface ProjectStats {
     completion_percentage: number;
     task_counts: {
