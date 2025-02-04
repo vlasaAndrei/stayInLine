@@ -25,18 +25,18 @@ export interface Project {
 export interface Task {
     id: number;
     name: string;
-    description: string | null;
-    deadline: Date | null;
+    description?: string | null;
+    deadline?: Date | null;
     status: TaskStatus;
-    project_id: number;
+    project_id?: number | null;
     created_at: Date;
     updated_at: Date;
     start_on: Date;
-    end_on: Date | null;
+    end_on?: Date | null;
     recurrence_type: RecurrenceType;
-    recurrence_interval: number | null;
-    recurrence_weekdays: number[] | null;
-    recurrence_day_of_month: number | null;
+    recurrence_interval?: number | null;
+    recurrence_weekdays?: number[] | null;
+    recurrence_day_of_month?: number | null;
 }
 
 export type CreateTaskInput = Omit<Task, 'id' | 'created_at' | 'updated_at'>;

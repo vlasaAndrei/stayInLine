@@ -1,3 +1,4 @@
+import CreateTaskButton from '@/components/CreateTaskButton';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -5,6 +6,7 @@ export default function Home() {
         <div className={styles.page}>
             <main className={styles.main}>
                 <h1>Welcome to Stay in Line, punk!</h1>
+                <CreateTaskButton />
             </main>
         </div>
     );
