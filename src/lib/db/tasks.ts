@@ -1,7 +1,5 @@
 import { query } from '.';
-import { Task } from './types';
-
-export type CreateTaskInput = Omit<Task, 'id' | 'created_at' | 'updated_at'>;
+import { CreateTaskInput, Task } from './types';
 
 export async function createTask(task: CreateTaskInput): Promise<Task> {
     return query<Task>(
