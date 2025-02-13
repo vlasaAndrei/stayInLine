@@ -1,20 +1,14 @@
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
+    --background-color:#fffffa
+    --main-lining-color: #333138;
+    --secondary-lining-color: #818D92;
+    --element-color: #000103;
+    --accent-color: #128C7E;
+    --error-color: #FF312E;
+
     /* These are added for intellisense, the values will be overwritted by Nextjs */
     --font-geist-mono: '';
     --font-geist-sans: '';
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
-    }
-
-    html {
-        color-scheme: dark;
-    }
 }
 
 html,
