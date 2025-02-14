@@ -2,7 +2,7 @@
     --background-color:#fffffa
     --main-lining-color: #333138;
     --secondary-lining-color: #818D92;
-    --element-color: #000103;
+    --text-color: #000103;
     --accent-color: #128C7E;
     --error-color: #FF312E;
 
@@ -11,18 +11,7 @@
     --font-geist-sans: '';
 }
 
-html,
 body {
-    max-width: 100vw;
-    overflow-x: hidden;
-}
-
-body {
-    color: var(--foreground);
-    background: var(--background);
-    font-family: Arial, Helvetica, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     min-height: 100dvh;
 }
 
@@ -32,7 +21,9 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: var(--font-geist-mono);
+    font-family: var(--font-geist-mono), "sans-serif";
+    color: var(--text-color) ;
+    background-color: var(--background-color);
 }
 
 a {

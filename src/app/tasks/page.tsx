@@ -1,20 +1,19 @@
 import { getAllTasks } from '@/lib/db/tasks';
-import { Task } from '@/lib/db/types';
+import { ITask } from '@/lib/db/types';
 import style from './page.module.css';
+import Task from '@/components/Task/Task';
 
 export default async function Tasks() {
-    const tasks: Task[] = await getAllTasks();
+    const tasks: ITask[] = await getAllTasks();
 
     return (
-        <div>
-            {tasks.map((task: Task) => {
+        <div className={style['tasks-container']}>
+            {tasks.map((task: ITask) => {
                 return (
-                    <div
+                    <Task
                         key={task.id}
-                        className={style.task}
-                    >
-                        {task.name} {task.id}
-                    </div>
+                        taskData={task}
+                    />
                 );
             })}
         </div>

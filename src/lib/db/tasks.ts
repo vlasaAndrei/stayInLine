@@ -1,8 +1,8 @@
 import { query } from '.';
-import { CreateTaskInput, Task } from './types';
+import { CreateTaskInput, ITask } from './types';
 
-export async function createTask(task: CreateTaskInput): Promise<Task> {
-    return query<Task>(
+export async function createTask(task: CreateTaskInput): Promise<ITask> {
+    return query<ITask>(
         `INSERT INTO tasks (
       name,
       project_id,
@@ -39,8 +39,8 @@ export async function createTask(task: CreateTaskInput): Promise<Task> {
     ).then(res => res.rows[0]);
 }
 
-export async function getAllTasks(): Promise<Task[]> {
-    return query<Task>('SELECT * FROM tasks ORDER BY created_at DESC').then(
+export async function getAllTasks(): Promise<ITask[]> {
+    return query<ITask>('SELECT * FROM tasks ORDER BY created_at DESC').then(
         res => res.rows,
     );
 }
