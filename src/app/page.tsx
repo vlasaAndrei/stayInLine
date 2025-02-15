@@ -12,6 +12,10 @@ export default async function Home() {
                 >
                     Tasks
                 </Link>
+                <Link
+                    className={styles.link}
+                    href={'weekly-schedule'}
+                ></Link>
             </main>
         </div>
     );

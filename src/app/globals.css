@@ -7,6 +7,7 @@
     --error-color: #FF312E;
 
     /* These are added for intellisense, the values will be overwritted by Nextjs */
+    --font-roboto-condensed: '';
     --font-geist-mono: '';
     --font-geist-sans: '';
 }
@@ -21,7 +22,7 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: var(--font-geist-mono), "sans-serif";
+    font-family: var(--font-roboto-condensed), "sans-serif";
     color: var(--text-color) ;
     background-color: var(--background-color);
 }
