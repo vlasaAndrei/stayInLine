@@ -1,5 +1,5 @@
 import { ITask } from '@/lib/db/types';
-import styles from './Task.module.css';
+import styles from './styles.module.css';
 
 interface Props {
     taskData: ITask;
